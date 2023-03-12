@@ -1,0 +1,7 @@
+datasets==2.8.0
+regex==2022.10.31
+sentencepiece==0.1.97
+tokenizers==0.9.4
+torch==1.6.0
+tqdm==4.64.1
+transformers==4.2.1

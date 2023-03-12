@@ -1,0 +1,9 @@
+faiss_cpu==1.7.3
+numpy==1.21.6
+Pillow==9.4.0
+pytrec_eval==0.5
+scikit_image==0.19.3
+torch==1.13.1
+tqdm==4.64.1
+transformers==4.25.1
+datasets==2.7.1
