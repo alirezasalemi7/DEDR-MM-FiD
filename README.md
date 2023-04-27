@@ -71,7 +71,7 @@ This section explains the datasets and files used to train the models.
   - qrel files (only for FVQA or any dataset that does not use dynamic evaluation): We use the original format of qrels file introduced by TREC.
 
 
-2. Answer generation:
+2. MM-FiD:
 
 
   - train_data/val_data/test_data: Inputs to each task should be JSONL (JSON lines) file, each line following this format:
