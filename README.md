@@ -101,7 +101,7 @@ This section explains the datasets and files used to train the models.
 }
 ```
 
-### Retrieval Data
+### DEDE Data
 
 1. OK-VQA:
 
@@ -128,7 +128,7 @@ This section explains the datasets and files used to train the models.
   - val_qrels: [download](https://ciir.cs.umass.edu/downloads/DEDR/data/fvqa/dev_qrel_new_ids.jsonl)
   - test_qrels: [download](https://ciir.cs.umass.edu/downloads/DEDR/data/fvqa/test_qrel_new_ids.jsonl)
 
-### Answer Generation Data
+### MM-FiD Data
 
 1. OK-VQA
 
