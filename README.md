@@ -1,21 +1,18 @@
 # A Symmetric Dual Encoding Dense Retrieval Framework for Knowledge-Intensive Visual Question Answering
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
-This repository contains the codes for the SIGIR23 paper: [A Symmetric Dual Encoding Dense Retrieval Framework for Knowledge-Intensive Visual Question Answering](https://arxiv.org/abs/2304.13649).
+This repository contains the code for the SIGIR23 paper:
+> Alireza Salemi, Juan Altmayer Pizzorno, and Hamed Zamani. [A Symmetric Dual Encoding Dense Retrieval Framework for Knowledge-Intensive Visual Question Answering](https://arxiv.org/abs/2304.13649).</b> In Proceedings of the 46th Int’l ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR ’23). Taipei, Taiwan, July 2023. [[BibTeX]](paper.bib)
+
+Knowledge-Intensive Visual Question Answering (KI-VQA) refers to answering a question about an image whose answer does not lie in the image. This paper presents a new pipeline for KI-VQA tasks, consisting of a retriever and a reader. First, we introduce DEDR, a symmetric dual encoding dense retrieval framework in which documents and queries are encoded into a shared embedding space using uni-modal (textual) and multi-modal encoders. We introduce an iterative knowledge distillation approach that bridges the gap between the representation spaces in these two encoders. Extensive evaluation on two well-established KI-VQA datasets, i.e., OK-VQA and FVQA, suggests that DEDR outperforms state-of-the-art baselines by 11.6% and 30.9% on OK-VQA and FVQA, respectively. Utilizing the passages retrieved by DEDR, we further introduce MM-FiD, an encoder-decoder multi-modal fusion-in-decoder model, for generating a textual answer for KI-VQA tasks. MM-FiD encodes the question, the image, and each retrieved passage separately and uses all passages jointly in its decoder. Compared to competitive baselines in the literature, this approach leads to 5.5% and 8.5% improvements in terms of question answering accuracy on OK-VQA and FVQA, respectively.
 
 <table>
 <tr>
-<td><img src="images/example.png?raw=True" width="400"/></td>
+<td><img src="images/example.png?raw=True"/></td></tr></tr>
 <td>An example KI-VQA question; answering it requires external knowledge.<br>
 <sup><sub><a href="https://www.flickr.com/photos/zrimshots/2788695458">Image copyright zrim [https://www.flickr.com/photos/zrimshots/2788695458]</a></sub></sup></td>
 </tr>
 </table>
-
-
-> Alireza Salemi, Juan Altmayer Pizzorno, and Hamed Zamani. A Symmetric Dual Encoding Dense Retrieval Framework for Knowledge-Intensive Visual Question Answering. In Proceedings of the 46th Int’l ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR ’23). Taipei, Taiwan, July 2023. [[BibTeX]](paper.bib)
-
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
-
-Knowledge-Intensive Visual Question Answering (KI-VQA) refers to answering a question about an image whose answer does not lie in the image. This paper presents a new pipeline for KI-VQA tasks, consisting of a retriever and a reader. First, we introduce DEDR, a symmetric dual encoding dense retrieval framework in which documents and queries are encoded into a shared embedding space using uni-modal (textual) and multi-modal encoders. We introduce an iterative knowledge distillation approach that bridges the gap between the representation spaces in these two encoders. Extensive evaluation on two well-established KI-VQA datasets, i.e., OK-VQA and FVQA, suggests that DEDR outperforms state-of-the-art baselines by 11.6% and 30.9% on OK-VQA and FVQA, respectively. Utilizing the passages retrieved by DEDR, we further introduce MM-FiD, an encoder-decoder multi-modal fusion-in-decoder model, for generating a textual answer for KI-VQA tasks. MM-FiD encodes the question, the image, and each retrieved passage separately and uses all passages jointly in its decoder. Compared to competitive baselines in the literature, this approach leads to 5.5% and 8.5% improvements in terms of question answering accuracy on OK-VQA and FVQA, respectively.
 
 ## Data
 
@@ -49,9 +46,9 @@ This section explains the datasets and files used to train the models.
   "id": /*id of this passage in all passages*/
 }
 ```
-  - image_feats_addr/image_feats_mapping_addr: In order to create the image_feats file, you can use [this](https://github.com/huggingface/transformers/blob/main/examples/research_projects/lxmert/extracting_data.py) script provided by HuggingFace. In order to create image_feats_mapping, which is used to speedup the search in image_feats dataset, we have provided the `shared/image_feats_to_ids.py` script for this purpose.
+  - image_feats_addr/image_feats_mapping_addr: In order to create the image_feats file, you can use [this script](https://github.com/huggingface/transformers/blob/main/examples/research_projects/lxmert/extracting_data.py) provided by HuggingFace. In order to create image_feats_mapping, which is used to speedup the search in image_feats dataset, we have provided the `shared/image_feats_to_ids.py` script for this purpose.
 
-  - captions: We use ExpansionNet v2 to generate captions, which can be found [here](https://github.com/jchenghu/ExpansionNet_v2). However, if you want to use your own captions with our approach, the caption file should be a json file that follows this format:
+  - captions: We use [ExpansionNet v2](https://github.com/jchenghu/ExpansionNet_v2) to generate captions. However, if you want to use your own captions with our approach, the caption file should be a json file that follows this format:
 
 ```
 {
@@ -84,7 +81,7 @@ This section explains the datasets and files used to train the models.
 }
 ```
 
-  - image_feats_addr/image_feats_mapping_addr: In order to create the image_feats file, you can use [this](https://github.com/huggingface/transformers/blob/main/examples/research_projects/lxmert/extracting_data.py) script provided by HuggingFace. In order to create image_feats_mapping, which is used to speedup the search in image_feats dataset, we have provided the `utils/image_feats_to_ids.py` script for this purpose.
+  - image_feats_addr/image_feats_mapping_addr: In order to create the image_feats file, you can use [this script](https://github.com/huggingface/transformers/blob/main/examples/research_projects/lxmert/extracting_data.py) provided by HuggingFace. In order to create image_feats_mapping, which is used to speedup the search in image_feats dataset, we have provided the `utils/image_feats_to_ids.py` script for this purpose.
 
   - ann_file/ques_file (only for OK-VQA dataset): We use the files provided by OK-VQA dataset [here](https://okvqa.allenai.org/download.html).
 
@@ -100,7 +97,7 @@ This section explains the datasets and files used to train the models.
 }
 ```
 
-### DEDE Data
+### DEDR Data
 
 1. OK-VQA:
 
@@ -146,13 +143,13 @@ This section explains the datasets and files used to train the models.
 
 ### Checkpoints
 
-Will be added soon!
+Coming soon!
   
 ## Dual Encoding Dense Retrieval (DEDR)
 
 <table>
 <tr>
-<td><img src="images/dedr.drawio-new.png?raw=True" width="400"/></td>
+<td><img src="images/dedr.drawio-new.png?raw=True"/></td>
 </tr>
 <tr>
 <td>The training and inference procedure in the DEDR framework. DEDR first trains uni-modal and multi-modal encoders in isolation (left), then uses iterative knowledge distillation to adjust both representation spaces (middle). At inference, DEDR uses the aggregation of both encodings to construct a symmetric dual encoding dense retriever (right).<br>
