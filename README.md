@@ -143,7 +143,18 @@ This section explains the datasets and files used to train the models.
 
 ### Checkpoints
 
-Coming soon!
+1. DEDR Checkpoints
+  - OK-VQA: $E_{MM}$[download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/retrieval/okvqa/okvqa/e_mm/) | $E_T$[download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/retrieval/okvqa/okvqa/e_t/)
+  - FVQA: $E_{MM}$[download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/retrieval/fvqa/fvqa/e_mm/) | $E_T$[download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/retrieval/fvqa/fvqa/e_t/)
+
+2. MM-FiD Checkpoints
+  - OK-VQA: With GPT3 [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/okvqa/okvqa/with_gpt3/) | Without GPT3 [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/okvqa/okvqa/without_gpt3/)
+  - FVQA
+    - Fold 1: MM-FiD [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/fvqa/reader/fold_1/) | $E_{MM}$ [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/fvqa/retriever/fold_1/e_mm/) | $E_{T}$ [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/fvqa/retriever/fold_1/e_t/)
+    - Fold 2: MM-FiD [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/fvqa/reader/fold_2/) | $E_{MM}$ [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/fvqa/retriever/fold_2/e_mm/) | $E_{T}$ [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/fvqa/retriever/fold_2/e_t/)
+    - Fold 3: MM-FiD [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/fvqa/reader/fold_3/) | $E_{MM}$ [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/fvqa/retriever/fold_3/e_mm/) | $E_{T}$ [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/fvqa/retriever/fold_3/e_t/)
+    - Fold 4: MM-FiD [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/fvqa/reader/fold_4/) | $E_{MM}$ [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/fvqa/retriever/fold_4/e_mm/) | $E_{T}$ [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/fvqa/retriever/fold_4/e_t/)
+    - Fold 5: MM-FiD [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/fvqa/reader/fold_5/) | $E_{MM}$ [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/fvqa/retriever/fold_5/e_mm/) | $E_{T}$ [download](https://ciir.cs.umass.edu/downloads/DEDR/checkpoints/reader/fvqa/retriever/fold_5/e_t/)
   
 ## Dual Encoding Dense Retrieval (DEDR)
 
