@@ -561,3 +561,7 @@ NGPU=/*Number of available GPUs*/ python -m torch.distributed.launch --nproc_per
   --ann_file /*Address to Annotation file in OK-VQA dataset for dynamic eval*/ \
   --ques_file /*Address to Question file in OK-VQA dataset for dynamic eval*/ \
 ```
+
+## Acknowledgment
+
+This work was supported in part by the Center for Intelligent Information Retrieval, in part by NSF grant #2106282, and in part by Lowe's. Any opinions, findings and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect those of the sponsor.
